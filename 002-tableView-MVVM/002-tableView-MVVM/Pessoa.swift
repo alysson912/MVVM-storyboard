@@ -7,11 +7,10 @@
 
 import UIKit
 
-
 struct Pessoa {
     var name : String
     var age : Int
     var profession : String
-    var salary : Double
+    var salary : String
     var imageUser: UIImage
 }

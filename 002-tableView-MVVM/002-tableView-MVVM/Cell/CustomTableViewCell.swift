@@ -32,6 +32,9 @@ class CustomTableViewCell: UITableViewCell {
         self.ageLabel.text = "Idade: \(data.age)"
         self.professionLabel.text = "Profissão: \(data.profession)"
         self.salaryLabel.text = "Salário: \(data.salary)"
+        
+        userImageView.clipsToBounds = true
+        userImageView.layer.cornerRadius = self.userImageView.frame.height / 2
     }
     
 }
