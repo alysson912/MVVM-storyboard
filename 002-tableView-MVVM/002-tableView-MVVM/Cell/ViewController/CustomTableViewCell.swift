@@ -15,6 +15,8 @@ class CustomTableViewCell: UITableViewCell {
     @IBOutlet weak var professionLabel: UILabel!
     @IBOutlet weak var salaryLabel: UILabel!
     
+    var viewModel : CustomCellViewModel?
+    
     static  let identifier = "CustomTableViewCell"
     
     static func nib() -> UINib {
@@ -25,16 +27,13 @@ class CustomTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
-    func configCell(data : Pessoa){
-        self.userImageView.image = data.imageUser
-        self.nameLabel.text = "Nome: \(data.name)"
-        self.ageLabel.text = "Idade: \(data.age)"
-        self.professionLabel.text = "Profissão: \(data.profession)"
-        self.salaryLabel.text = "Salário: \(data.salary)"
-        
-        userImageView.clipsToBounds = true
-        userImageView.layer.cornerRadius = self.userImageView.frame.height / 2
+    func configCell(user : User){
+        self.viewModel = CustomCellViewModel(data: user)
+        self.userImageView.image = self.viewModel?.getImage
+        self.nameLabel.text = self.viewModel?.getName
+        self.ageLabel.text = self.viewModel?.getAge
+        self.professionLabel.text = self.viewModel?.getProfetion
+        self.salaryLabel.text = self.viewModel?.getSalary
     }
     
 }

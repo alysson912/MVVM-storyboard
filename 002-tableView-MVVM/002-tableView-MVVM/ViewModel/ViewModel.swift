@@ -2,44 +2,36 @@
 //  ViewModel.swift
 //  002-tableView-MVVM
 //
-//  Created by ALYSSON DODO on 14/12/22.
+//  Created by ALYSSON DODO on 15/12/22.
 //
 
 import UIKit
 
-class ViewModel {
+class ViewModel{
 
-  private var listUser: [Pessoa] = []
+  private var listUser: [User] = []
     
     init(){
-        self.configArrayUser()
+        configArrayUser()
     }
     
-  private func configArrayUser(){
-        self.listUser.append(Pessoa(name: "Alysson", age: 25, profession: "IOS Developer", salary: "4.800", imageUser: UIImage(named: "Image-1") ?? UIImage()))
-        self.listUser.append(Pessoa(name: "Jessica", age: 29, profession: "IOS Developer", salary: "6.800", imageUser: UIImage(named: "Image-2") ?? UIImage()))
-        self.listUser.append(Pessoa(name: "Anderson", age: 29, profession: "IOS Developer", salary: "35.800", imageUser: UIImage(named: "Image-3") ?? UIImage()))
-        self.listUser.append(Pessoa(name: "Jessica", age: 29, profession: "IOS Developer", salary: "6.800", imageUser: UIImage(named: "Image-4") ?? UIImage()))
-        self.listUser.append(Pessoa(name: "Caio", age: 29, profession: "IOS Developer", salary: "25.800", imageUser: UIImage(named: "Image-5") ?? UIImage()))
+   private func configArrayUser(){
+        self.listUser.append(User(name: "Alysson", age: 25, profetion: "IOS Developer", salary: 4.800, imageUser: UIImage(named: "Image-1") ?? UIImage()))
+        self.listUser.append(User(name: "Jessica", age: 29, profetion: "IOS Developer", salary: 6.800, imageUser: UIImage(named: "Image-2") ?? UIImage()))
+        self.listUser.append(User(name: "Anderson", age: 29, profetion: "IOS Developer", salary: 35.800, imageUser: UIImage(named: "Image-3") ?? UIImage()))
+        self.listUser.append(User(name: "Jessica", age: 29, profetion: "IOS Developer", salary: 6.800, imageUser: UIImage(named: "Image-4") ?? UIImage()))
+        self.listUser.append(User(name: "Caio", age: 29, profetion: "IOS Developer", salary: 25.800, imageUser: UIImage(named: "Image-5") ?? UIImage()))
     }
     
- 
-    // variavel computada para armazenar a quantidade de elementos dentro do array
-    public var numberOfRowsInSection: Int{
-        return self.listUser.count
-    }
-    // variavel para armazenar a altura da celula
-    public var heightForRowAt : CGFloat {
-      return 150
+    var numberOfRowsInSection : Int{
+        return listUser.count
     }
     
-    // criar funcao para retornar o objeto pessoa
-    public func loadCurrentUser(indexPath : IndexPath) -> Pessoa{
-        return self.listUser[ indexPath.row]
+    public func loadCurrentUser ( indexPath : IndexPath) -> User{
+        return listUser[ indexPath.row]
     }
     
-    // pegar o nome ao clicar na cell
-    public func getName(indexPath : IndexPath) -> String{
-        return self.listUser[ indexPath.row].name
+    var heightForRowAt : CGFloat {
+        return 150
     }
 }
