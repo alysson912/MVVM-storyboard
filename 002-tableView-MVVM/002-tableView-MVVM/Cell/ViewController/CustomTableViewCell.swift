@@ -8,7 +8,7 @@
 import UIKit
 
 class CustomTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
@@ -29,7 +29,7 @@ class CustomTableViewCell: UITableViewCell {
     }
     func configCell(user : User){
         self.viewModel = CustomCellViewModel(data: user)
-        self.userImageView.image = self.viewModel?.getImage
+        self.userImageView.image = UIImage(named: self.viewModel?.getImage ?? "")
         self.nameLabel.text = self.viewModel?.getName
         self.ageLabel.text = self.viewModel?.getAge
         self.professionLabel.text = self.viewModel?.getProfetion

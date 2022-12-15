@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		380E8AE4294B50CE001C60FD /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380E8AE3294B50CE001C60FD /* ViewModel.swift */; };
 		380E8AE7294B97F0001C60FD /* CustomCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380E8AE6294B97F0001C60FD /* CustomCellViewModel.swift */; };
+		380E8AED294BA4BD001C60FD /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380E8AEC294BA4BD001C60FD /* Service.swift */; };
+		380E8AEF294BA84A001C60FD /* user.json in Resources */ = {isa = PBXBuildFile; fileRef = 380E8AEE294BA84A001C60FD /* user.json */; };
 		383BD7D8294A240E003BD3C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383BD7D7294A240E003BD3C9 /* AppDelegate.swift */; };
 		383BD7DA294A240E003BD3C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383BD7D9294A240E003BD3C9 /* SceneDelegate.swift */; };
 		383BD7DC294A240E003BD3C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383BD7DB294A240E003BD3C9 /* ViewController.swift */; };
@@ -23,6 +25,8 @@
 /* Begin PBXFileReference section */
 		380E8AE3294B50CE001C60FD /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		380E8AE6294B97F0001C60FD /* CustomCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellViewModel.swift; sourceTree = "<group>"; };
+		380E8AEC294BA4BD001C60FD /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		380E8AEE294BA84A001C60FD /* user.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = user.json; sourceTree = "<group>"; };
 		383BD7D4294A240E003BD3C9 /* 002-tableView-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "002-tableView-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		383BD7D7294A240E003BD3C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		383BD7D9294A240E003BD3C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +118,14 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		380E8AEB294BA4AD001C60FD /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				380E8AEC294BA4BD001C60FD /* Service.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		383BD7CB294A240E003BD3C9 = {
 			isa = PBXGroup;
 			children = (
@@ -133,13 +145,15 @@
 		383BD7D6294A240E003BD3C9 /* 002-tableView-MVVM */ = {
 			isa = PBXGroup;
 			children = (
-				380E8AEA294BA185001C60FD /* Home */,
+				380E8AEB294BA4AD001C60FD /* Service */,
 				383BD7ED294A2633003BD3C9 /* Cell */,
+				380E8AEA294BA185001C60FD /* Home */,
 				383BD7D7294A240E003BD3C9 /* AppDelegate.swift */,
 				383BD7D9294A240E003BD3C9 /* SceneDelegate.swift */,
 				383BD7E0294A240F003BD3C9 /* Assets.xcassets */,
 				383BD7E2294A240F003BD3C9 /* LaunchScreen.storyboard */,
 				383BD7E5294A240F003BD3C9 /* Info.plist */,
+				380E8AEE294BA84A001C60FD /* user.json */,
 			);
 			path = "002-tableView-MVVM";
 			sourceTree = "<group>";
@@ -216,6 +230,7 @@
 				383BD7E1294A240F003BD3C9 /* Assets.xcassets in Resources */,
 				383BD7F1294A2653003BD3C9 /* CustomTableViewCell.xib in Resources */,
 				383BD7DF294A240E003BD3C9 /* Main.storyboard in Resources */,
+				380E8AEF294BA84A001C60FD /* user.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				383BD7DC294A240E003BD3C9 /* ViewController.swift in Sources */,
+				380E8AED294BA4BD001C60FD /* Service.swift in Sources */,
 				383BD7F0294A2653003BD3C9 /* CustomTableViewCell.swift in Sources */,
 				383BD7D8294A240E003BD3C9 /* AppDelegate.swift in Sources */,
 				380E8AE7294B97F0001C60FD /* CustomCellViewModel.swift in Sources */,

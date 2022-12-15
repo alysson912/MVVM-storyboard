@@ -8,10 +8,14 @@
 import UIKit
 
 
-struct User {
+struct UserResult: Codable {
+    var group : [User]
+}
+
+struct User : Codable {
     var name : String
     var age : Int
     var profetion : String
-    var salary : Double
-    var imageUser: UIImage
+    var salary : String
+    var imageUser: String
 }

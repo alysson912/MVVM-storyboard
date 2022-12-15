@@ -14,13 +14,13 @@ enum DescriptionCustomCell : String{
 }
 
 class CustomCellViewModel{
-  private var data : User
+    private var data : User
     
     init(data: User) {
         self.data = data
     }
     
-   public var getName: String {
+    public var getName: String {
         return DescriptionCustomCell.name.rawValue + self.data.name
     }
     public  var getAge: String {
@@ -32,7 +32,7 @@ class CustomCellViewModel{
     public var getSalary: String {
         return DescriptionCustomCell.salary.rawValue + String(self.data.salary)
     }
-    public var getImage: UIImage {
+    public var getImage: String {
         return self.data.imageUser
     }
 }

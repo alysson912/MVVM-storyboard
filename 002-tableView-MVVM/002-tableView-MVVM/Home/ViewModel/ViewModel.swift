@@ -6,23 +6,32 @@
 //
 
 import UIKit
+protocol ViewModelDelegate : NSObject {
+    func successRequest()
+    func errorRequest()
+}
 
 class ViewModel{
+    private let service : Service = Service()
+    private var listUser: [User] = []
+    
+    private weak var delegate : ViewModelDelegate?
+    
+    public func delegate( delegate: ViewModelDelegate?){
+        self.delegate = delegate
+    }
+    
+    public func fetchAllRequest(){
+        service.getUserFromJson(fromFileNamed: "user"){ success, error in
+            if let _success = success{
+                self.listUser = _success.group
+                self.delegate?.successRequest()
+            }else {
+                self.delegate?.errorRequest()
+            }
+        }
+    }
 
-  private var listUser: [User] = []
-    
-    init(){
-        configArrayUser()
-    }
-    
-   private func configArrayUser(){
-        self.listUser.append(User(name: "Alysson", age: 25, profetion: "IOS Developer", salary: 4.800, imageUser: UIImage(named: "Image-1") ?? UIImage()))
-        self.listUser.append(User(name: "Jessica", age: 29, profetion: "IOS Developer", salary: 6.800, imageUser: UIImage(named: "Image-2") ?? UIImage()))
-        self.listUser.append(User(name: "Anderson", age: 29, profetion: "IOS Developer", salary: 35.800, imageUser: UIImage(named: "Image-3") ?? UIImage()))
-        self.listUser.append(User(name: "Jessica", age: 29, profetion: "IOS Developer", salary: 6.800, imageUser: UIImage(named: "Image-4") ?? UIImage()))
-        self.listUser.append(User(name: "Caio", age: 29, profetion: "IOS Developer", salary: 25.800, imageUser: UIImage(named: "Image-5") ?? UIImage()))
-    }
-    
     var numberOfRowsInSection : Int{
         return listUser.count
     }
