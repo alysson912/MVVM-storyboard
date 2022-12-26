@@ -11,28 +11,28 @@
             "name": "Ana",
             "age" : 26,
             "profetion": "IOS Developer",
-            "salary": "4.800",
+            "salary": "6.800",
             "imageUser": "Image-2",
         },
         {
             "name": "Andresa",
             "age" : 27,
             "profetion": "IOS Developer",
-            "salary": "4.800",
+            "salary": "5.100",
             "imageUser": "Image-3",
         },
         {
             "name": "Clara",
             "age" : 21,
             "profetion": "IOS Developer",
-            "salary": "4.800",
+            "salary": "8.300",
             "imageUser": "Image-4",
         },
         {
             "name": "Vanessa",
             "age" : 22,
             "profetion": "IOS Developer",
-            "salary": "4.800",
+            "salary": "4.000",
             "imageUser": "Image-5",
         }
     ]

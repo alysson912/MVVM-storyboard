@@ -20,6 +20,7 @@
 		383BD7EC294A2472003BD3C9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383BD7EB294A2472003BD3C9 /* User.swift */; };
 		383BD7F0294A2653003BD3C9 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383BD7EE294A2653003BD3C9 /* CustomTableViewCell.swift */; };
 		383BD7F1294A2653003BD3C9 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 383BD7EF294A2653003BD3C9 /* CustomTableViewCell.xib */; };
+		FC64788C3CB35A69F0095536 /* Pods_002_tableView_MVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E654795E7595F29A2153694A /* Pods_002_tableView_MVVM.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,9 @@
 		383BD7EB294A2472003BD3C9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		383BD7EE294A2653003BD3C9 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		383BD7EF294A2653003BD3C9 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		9B1689887E6C00EE09BC4055 /* Pods-002-tableView-MVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-002-tableView-MVVM.debug.xcconfig"; path = "Target Support Files/Pods-002-tableView-MVVM/Pods-002-tableView-MVVM.debug.xcconfig"; sourceTree = "<group>"; };
+		E654795E7595F29A2153694A /* Pods_002_tableView_MVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_002_tableView_MVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F485D5616A006054F9902D8C /* Pods-002-tableView-MVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-002-tableView-MVVM.release.xcconfig"; path = "Target Support Files/Pods-002-tableView-MVVM/Pods-002-tableView-MVVM.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC64788C3CB35A69F0095536 /* Pods_002_tableView_MVVM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +136,8 @@
 			children = (
 				383BD7D6294A240E003BD3C9 /* 002-tableView-MVVM */,
 				383BD7D5294A240E003BD3C9 /* Products */,
+				7BD452807DC6C9DAE9413C40 /* Pods */,
+				FE93F4A528779525C7D448DA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -168,6 +175,24 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		7BD452807DC6C9DAE9413C40 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9B1689887E6C00EE09BC4055 /* Pods-002-tableView-MVVM.debug.xcconfig */,
+				F485D5616A006054F9902D8C /* Pods-002-tableView-MVVM.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FE93F4A528779525C7D448DA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E654795E7595F29A2153694A /* Pods_002_tableView_MVVM.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -175,9 +200,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 383BD7E8294A240F003BD3C9 /* Build configuration list for PBXNativeTarget "002-tableView-MVVM" */;
 			buildPhases = (
+				EAB2C4FA415325C50C68879D /* [CP] Check Pods Manifest.lock */,
 				383BD7D0294A240E003BD3C9 /* Sources */,
 				383BD7D1294A240E003BD3C9 /* Frameworks */,
 				383BD7D2294A240E003BD3C9 /* Resources */,
+				53ABBC19EF6CEE985FC4B77F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -235,6 +262,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		53ABBC19EF6CEE985FC4B77F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-002-tableView-MVVM/Pods-002-tableView-MVVM-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-002-tableView-MVVM/Pods-002-tableView-MVVM-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-002-tableView-MVVM/Pods-002-tableView-MVVM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EAB2C4FA415325C50C68879D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-002-tableView-MVVM-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		383BD7D0294A240E003BD3C9 /* Sources */ = {
@@ -390,6 +459,7 @@
 		};
 		383BD7E9294A240F003BD3C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B1689887E6C00EE09BC4055 /* Pods-002-tableView-MVVM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -421,6 +491,7 @@
 		};
 		383BD7EA294A240F003BD3C9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F485D5616A006054F9902D8C /* Pods-002-tableView-MVVM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

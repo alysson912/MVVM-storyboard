@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Alamofire
 protocol GenericService : AnyObject {
     typealias completion <T> = (_ result: T,_ faiure: Error?) -> Void
 }
